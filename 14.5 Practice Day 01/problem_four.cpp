@@ -8,3 +8,45 @@ Sample Output
 50 40 30 20 10
 
 */
+
+#include <bits/stdc++.h>
+using namespace std;
+
+int main()
+{
+    int sizeN;
+    cin >> sizeN;
+
+    queue<int> qu;
+
+    while (sizeN--)
+    {
+        int val;
+        cin >> val;
+        qu.push(val);
+    }
+
+    queue<int> newQ;
+
+    stack<int> st;
+
+    while (!qu.empty())
+    {
+        st.push(qu.front());
+        qu.pop();
+    }
+
+    while (!st.empty())
+    {
+        newQ.push(st.top());
+        st.pop();
+    }
+
+    while (!newQ.empty())
+    {
+        cout << newQ.front() << " ";
+        newQ.pop();
+    }
+
+    return 0;
+}
