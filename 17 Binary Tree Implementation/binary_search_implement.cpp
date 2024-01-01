@@ -1,3 +1,14 @@
+/*
+       10
+     /    \
+   /        \
+  20        30
+ /   \        \
+40    90       50
+ \       \     / \
+  60    100   70  80        
+        
+*/
 #include <bits/stdc++.h>
 using namespace std;
 class Node
